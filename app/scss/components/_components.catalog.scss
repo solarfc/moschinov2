@@ -1,0 +1,417 @@
+/*
+    catalog style
+ */
+
+.catalog {
+  padding: 55px 0;
+
+  .container {
+    position: relative;
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: 194px;
+      height: 1135px;
+      background: url("../img/catalog/logo.png") no-repeat center/cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      left: -267px;
+    }
+
+    &:after {
+      right: -267px;
+    }
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+
+    span {
+
+      &.old-price {
+        order: 2;
+        margin: -3px 0 0;
+      }
+
+      &.new-price {
+        order: 1;
+      }
+    }
+  }
+
+  form {
+    width: 250px;
+
+    .form-group {
+
+      input {
+        font-family: $r, sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        color: #000;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px 10px;
+        background: transparent;
+        border: 1px solid #000;
+        transition: all 0.5s ease-in-out;
+
+        &::placeholder {
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          color: inherit;
+          opacity: 1;
+        }
+
+        &:active, &:focus, &:required {
+          outline: none;
+        }
+
+        &:active, &:focus {
+          color: #fe5555;
+          border: 1px solid #fe5555;
+        }
+      }
+
+      &.tel {
+        margin: 10px auto;
+      }
+    }
+  }
+
+  &__shoe {
+    box-sizing: border-box;
+    padding: 29px 30px 30px;
+    background: url("../img/frozen.jpg") no-repeat center/cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    .logo {
+      display: flex;
+      width: 459px;
+      margin-left: auto;
+
+      svg {
+        height: 39px;
+
+        &:nth-child(1) {
+          width: 69px;
+          margin-right: 13.85px;
+        }
+
+        &:nth-child(2) {
+          width: 146px;
+        }
+      }
+    }
+
+    h5 {
+      text-align: left;
+      color: #9968ff;
+      box-sizing: border-box;
+      width: 459px;
+      padding-left: 45px;
+      margin: 10px 0 15px auto;
+      position: relative;
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &:before {
+        width: 32px;
+        height: 35px;
+        background: url("../img/advantages/2.png") no-repeat center/cover;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+
+      &:after {
+        width: 95px;
+        height: 15px;
+        background: url("../img/star.png") no-repeat center/cover;
+        top: 14px;
+        left: 133px;
+      }
+    }
+
+    .price {
+
+    }
+
+    &-img {
+      box-sizing: border-box;
+      width: 560px;
+      padding: 74px 0 27px 30px;
+      background: linear-gradient(136.81deg, rgba(168, 126, 255, 0.8) 0%, rgba(252, 167, 228, 0.8) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .color {
+        width: 72px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 30px;
+        right: 22px;
+
+        span {
+          box-sizing: border-box;
+          width: 36px;
+          height: 36px;
+          background: transparent;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.5s ease-in-out;
+
+          &:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &.white {
+
+            &:before {
+              background: #fff;
+            }
+
+            &.active {
+              border: 2px solid #fff;
+            }
+          }
+
+          &.black {
+
+            &:before {
+              background: #000;
+            }
+
+            &.active {
+              border: 2px solid #000;
+            }
+          }
+        }
+      }
+
+      img.big {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -75px;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .images {
+        margin-bottom: 23px;
+
+        a {
+          margin-bottom: 10px;
+          width: 100px;
+
+          img {
+            width: 100%;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
+    ul {
+      width: 459px;
+      margin-left: auto;
+
+      li {
+        display: flex;
+
+        span {
+          line-height: 24px;
+          display: block;
+
+          &:nth-child(1) {
+            width: 289px;
+          }
+
+          &:nth-child(2) {
+            width: calc(100% - 289px);
+          }
+        }
+      }
+    }
+
+    &-info {
+      width: 459px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 27px 0 0 auto;
+
+      .size {
+        width: 92px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        p {
+          text-align: center;
+          box-sizing: border-box;
+          width: 36px;
+          padding: 7.5px 0;
+          border: 1px solid #000;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.5s ease-in-out;
+          z-index: 9;
+
+          span {
+            text-align: left;
+            color: #a87eff;
+            display: block;
+            width: 55px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -65px;
+            cursor: auto;
+            opacity: 0;
+            transition: inherit;
+          }
+
+          &:before {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #fca7e4 0%, #a87eff 100%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0;
+            transition: inherit;
+          }
+
+          &.active {
+            color: #fff;
+
+            span {
+              opacity: 1;
+            }
+
+            &:before {
+              opacity: 1;
+            }
+          }
+
+          &:nth-child(odd) {
+
+            span {
+              right: -121px;
+            }
+          }
+
+          &:nth-child(3), &:nth-child(4) {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+
+    &.boots {
+
+    }
+
+    &.sneakers {
+      margin: 20px auto;
+    }
+  }
+
+  &__spray {
+    box-sizing: border-box;
+    padding: 10px 0 41px;
+    background: url("../img/frozen.jpg") no-repeat center/cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    h3 {
+      text-transform: uppercase;
+      color: #000;
+      margin: 0 0 48px 300px;
+    }
+
+    &-img {
+      box-sizing: border-box;
+      padding: 16px 27.5px 23px;
+      background: linear-gradient(136.81deg, rgba(168, 126, 255, 0.8) 0%, rgba(252, 167, 228, 0.8) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    ul {
+      width: 249px;
+      position: absolute;
+      top: 129px;
+      right: 0;
+
+      li {
+        display: flex;
+
+        span {
+          display: block;
+          line-height: 24px;
+
+          &:nth-child(1) {
+            width: 115px;
+          }
+
+          &:nth-child(2) {
+            width: calc(100% - 115px);
+          }
+        }
+      }
+    }
+
+    p {
+      max-width: 436px;
+      margin-left: 300px;
+
+      &:nth-of-type(2) {
+        margin: 41.5px 0 41.5px 300px;
+      }
+
+    }
+
+    form {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+}

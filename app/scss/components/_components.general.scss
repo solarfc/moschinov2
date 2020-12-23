@@ -1,0 +1,259 @@
+/*
+    general style
+ */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(91.67deg, rgba(252, 167, 228, 0.5) 0%, rgba(168, 126, 255, 0.5) 100%);
+  font-family: $r, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+
+  @include mq(lg) {
+    width: 960px;
+  }
+
+  @include mq(md) {
+    width: 720px;
+  }
+
+  @include mq(s) {
+    width: 94%;
+  }
+
+  @include mq(xs) {
+    width: 90.625%;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  user-select: none;
+}
+
+h1, h2, h3, h5, h6 {
+  font-family: $b, sans-serif;
+}
+
+h1, h2, h3, h6 {
+  color: #fff;
+}
+
+h1 {
+  font-size: 96px;
+  line-height: 142px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 76px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 48px;
+  line-height: 71px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+h6 {
+  line-height: 24px;
+}
+
+p {
+
+  &.big {
+    line-height: 24px;
+  }
+}
+
+.logo {
+
+  svg {
+    display: block;
+  }
+}
+
+.sale {
+
+  span {
+    font-family: $b, sans-serif;
+    font-size: 96px;
+    line-height: 142px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    strong {
+      display: block;
+      font-size: 72px;
+      line-height: 107px;
+      margin-top: -27px;
+    }
+  }
+}
+
+.price {
+  text-align: center;
+
+  span {
+    font-family: $b, sans-serif;
+
+    &.old-price {
+      font-size: 24px;
+      line-height: 36px;
+      display: inline-block;
+      position: relative;
+      margin-right: 44.08px;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #000;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        transform: translateY(-55%);
+      }
+    }
+
+    &.new-price {
+      font-size: 48px;
+      line-height: 71px;
+      background: linear-gradient(93.27deg, #fe5555 0.08%, #fe9255 99.94%);;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #fe5555;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.to-order, .form-group.order {
+  max-width: 250px;
+
+  a, button {
+    font-family: $b, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 0 17px;
+    border: none;
+    position: relative;
+    z-index: 9;
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    &:before {
+      background: linear-gradient(93.27deg, #fe5555 0.08%, #fe9255 99.94%);
+    }
+
+    &:after {
+      background: linear-gradient(93.3deg, #fe9255 0%, #fe5555 100%);
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.to-order {
+  margin: 32px auto 0;
+
+  p {
+    text-align: center;
+    margin-top: 32px;
+  }
+}
+
+.gallery, .photo {
+  position: relative;
+  z-index: 11;
+
+  &__content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 6px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+
+    >a {
+      width: 19.2%;
+      max-width: 365px;
+      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+      }
+
+      @include mq(xl) {
+        width: 19%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+/*
+    video style
+ */
+
+.video {
+  padding: 55px 0;
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-clip {
+      width: 553px;
+
+      figure {
+        height: 304px;
+        position: relative;
+        cursor: pointer;
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+        }
+
+        img {
+
+        }
+
+        .video-play {
+          width: 62px;
+          height: 62px;
+          background: url("../img/video/video-play.png") no-repeat center/cover;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+      }
+    }
+
+    &-info {
+      width: 458px;
+
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      p {
+
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 506px;
+    background: url("../img/snow.png") no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

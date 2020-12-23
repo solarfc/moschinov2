@@ -1,0 +1,71 @@
+/*
+    header style
+ */
+
+.header {
+  background: url("../img/header/bg.jpg") no-repeat center/cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  padding: 52px 0 55px;
+  position: relative;
+  z-index: 11;
+
+  &__content {
+    position: relative;
+
+    .logo {
+
+
+      svg {
+        display: block;
+        height: 49px;
+        margin: 0 auto;
+
+        path {
+          fill: #000;
+        }
+
+        &:nth-child(1) {
+          width: 88px;
+        }
+
+        &:nth-child(2) {
+          width: 186px;
+          margin: 6px auto 0;
+        }
+      }
+    }
+
+    .sale {
+      position: absolute;
+      top: -10px;
+
+      &:nth-child(2) {
+        left: 0;
+      }
+
+      &:nth-child(3) {
+        right: 0;
+      }
+    }
+
+    h2 {
+      color: #9968ff;
+      max-width: 500px;
+      margin: 30.39px auto 17px;
+    }
+
+    img {
+      position: absolute;
+
+      &.white {
+        bottom: -104.16px;
+        left: 46.08px;
+      }
+
+      &.black {
+        bottom: -115.44px;
+        right: 51.2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/*
+    font face
+ */
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans-Regular.woff");
+}
+$r : "OpenSans-Regular";
+
+@font-face {
+  font-family: "Oswald-Bold";
+  src: url("../fonts/Oswald-Bold.woff");
+}
+$b : "Oswald-Bold";
+
