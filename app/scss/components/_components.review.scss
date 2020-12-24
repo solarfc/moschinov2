@@ -6,14 +6,40 @@
   padding: 55px 0 35px;
   position: relative;
 
+  @include mq(md) {
+    padding-top: 35px;
+  }
+
   &__content {
 
     h3 {
       text-align: center;
+
+      @include mq(xs) {
+        line-height: 46px;
+      }
+
+      span {
+
+        @include mq(xs) {
+          display: block;
+          font-size: 36px;
+          line-height: 35px;
+        }
+      }
     }
 
     &-slider {
       position: relative;
+
+      @include mq(lg) {
+        box-sizing: border-box;
+        padding: 0 25px;
+      }
+
+      @include mq(md) {
+        padding: 0;
+      }
 
       .owl-stage-outer {
         margin: 0 -20px;
@@ -32,6 +58,10 @@
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
         position: relative;
 
+        @include mq(s) {
+          padding: 20px 12px;
+        }
+
         h5 {
           text-align: left;
           margin-bottom: 27px;
@@ -46,21 +76,64 @@
           position: absolute;
           top: 46px;
           right: 49px;
+
+          @include mq(s) {
+            top: 32px;
+            right: 12px;
+          }
         }
       }
 
-      button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+      .owl-nav{
 
-        &.owl-prev {
-          left: -42px;
+        button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+
+          &.owl-prev {
+            left: -42px;
+
+            @include mq(xl) {
+              left: -25px;
+            }
+
+            @include mq(lg) {
+              left: 0;
+            }
+          }
+
+          &.owl-next {
+            transform: translateY(-50%) scale(-1 ,1);
+            right: -42px;
+
+            @include mq(xl) {
+              right: -25px;
+            }
+
+            @include mq(lg) {
+              right: 0;
+            }
+          }
         }
+      }
 
-        &.owl-next {
-          transform: translateY(-50%) scale(-1 ,1);
-          right: -42px;
+      .owl-dots {
+        display: flex;
+        justify-content: center;
+
+        button {
+          box-sizing: border-box;
+          width: 7px;
+          height: 7px;
+          background: transparent;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          margin-right: 9px;
+
+          &.active {
+            background: #fff;
+          }
         }
       }
     }

@@ -6,13 +6,30 @@
   padding: 55px 0;
   position: relative;
 
+  @include mq(md) {
+    padding: 35px 0;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @include mq(md) {
+      display: block;
+    }
+
     &-clip {
       width: 553px;
+
+      @include mq(md) {
+        margin: 0 auto;
+      }
+
+      @include mq(s) {
+        width: 100%;
+        max-width: 553px;
+      }
 
       figure {
         height: 304px;
@@ -22,6 +39,11 @@
 
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+        }
+
+        @include mq(s) {
+          height: auto;
+          padding-bottom: 55%;
         }
 
         img {
@@ -38,6 +60,11 @@
           left: 50%;
           transform: translate(-50%, -50%);
           pointer-events: none;
+
+          @include mq(xs) {
+            width: 33px;
+            height: 33px;
+          }
         }
       }
     }
@@ -45,8 +72,21 @@
     &-info {
       width: 458px;
 
+      @include mq(lg) {
+        width: 380px;
+      }
+
+      @include mq(md) {
+        width: 100%;
+        margin: 20px auto 0;
+      }
+
       h3 {
         margin-bottom: 20px;
+
+        @include mq(md) {
+          text-align: center;
+        }
       }
 
       p {

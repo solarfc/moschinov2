@@ -11,10 +11,24 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
   }
 
+  @include mq(md) {
+    padding: 35px 0;
+  }
+
+  @include mq(s) {
+    background: transparent;
+    position: relative;
+    z-index: 9;
+  }
+
   .delivery {
 
     h3 {
       text-align: center;
+
+      @include mq(xs) {
+        line-height: 46px;
+      }
     }
 
     &__content {
@@ -23,7 +37,21 @@
       max-width: 928px;
       margin: 20px auto 0;
 
+      @include mq(s) {
+        flex-wrap: wrap;
+        max-width: 540px;
+      }
+
       figure {
+
+        @include mq(s) {
+          width: 48%;
+          margin-bottom: 20px;
+        }
+
+        @include mq(xs) {
+          width: 100%;
+        }
 
         img {
 
@@ -33,6 +61,35 @@
           text-align: center;
           color: #fff;
           margin-top: 1px;
+
+          br {
+
+            @include mq(s) {
+              display: none;
+            }
+
+            @include mq(xs) {
+              display: block;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+
+          @include mq(s) {
+            margin-bottom: 0;
+          }
+
+          @include mq(xs) {
+            margin-bottom: 20px;
+          }
+        }
+
+        &:last-child {
+
+          @include mq(s) {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -43,14 +100,34 @@
     margin: 55px 0 0 auto;
     position: relative;
 
+    @include mq(md) {
+      margin: 35px auto 0;
+    }
+
+    @include mq(xs) {
+      width: 100%;
+    }
+
     .logo {
       position: absolute;
       top: 93px;
       left: -649px;
 
+      @include mq(lg) {
+        left: -449px;
+      }
+
+      @include mq(md) {
+        position: static;
+      }
+
       svg {
         height: 96px;
         margin: 0 auto;
+
+        @include mq(xs) {
+          height: 60px;
+        }
 
         path {
           fill: #fff;
@@ -59,20 +136,36 @@
         &:nth-child(1) {
           width: 172px;
           margin-bottom: 9px;
+
+          @include mq(xs) {
+            width: 107px;
+            margin-bottom: 7px;
+          }
         }
 
         &:nth-child(2) {
           width: 363px;
+
+          @include mq(xs) {
+            width: 226px;
+          }
         }
       }
     }
 
     h2 {
 
+      @include mq(md) {
+        margin: 20px auto -2px;
+      }
     }
 
     .price {
       margin: 17px auto 33px;
+
+      @include mq(md) {
+        margin: 0 auto 0;
+      }
 
       span {
 
@@ -89,9 +182,29 @@
     .to-order {
       margin: 0 auto;
 
+      @include mq(md) {
+        margin-top: 6px;
+      }
+
       p {
         color: #fff;
       }
+    }
+  }
+
+  &:before {
+
+    @include mq(s) {
+      content: "";
+      display: block;
+      width: 1920px;
+      height: 100%;
+      background: url("../img/footer/bg-s.jpg") no-repeat center/cover;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
     }
   }
 }

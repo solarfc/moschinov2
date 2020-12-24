@@ -71,12 +71,44 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+
+  @include mq(xxl) {
+    font-size: 86px;
+    line-height: 130px;
+    top: 0;
+  }
+
+  @include mq(xl) {
+    font-size: 76px;
+    line-height: 114px;
+    top: -4%;
+  }
+
+  @include mq(s) {
+    font-size: 62px;
+    line-height: 71px;
+  }
+
+  @include mq(xs) {
+    font-size: 48px;
+    line-height: 55px;
+  }
 }
 
 h2 {
   font-size: 64px;
   line-height: 76px;
   text-align: center;
+
+  @include mq(s) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  @include mq(xs) {
+    font-size: 36px;
+    line-height: 43px;
+  }
 }
 
 h3 {
@@ -118,11 +150,31 @@ p {
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     color: #fff;
 
+    @include mq(s) {
+      font-size: 80px;
+      line-height: 118px;
+    }
+
+    @include mq(xs) {
+      font-size: 64px;
+      line-height: 95px;
+    }
+
     strong {
       display: block;
       font-size: 72px;
       line-height: 107px;
       margin-top: -27px;
+
+      @include mq(s) {
+        font-size: 60px;
+        line-height: 88px;
+      }
+
+      @include mq(xs) {
+        font-size: 48px;
+        line-height: 71px;
+      }
     }
   }
 }
@@ -139,6 +191,10 @@ p {
       display: inline-block;
       position: relative;
       margin-right: 44.08px;
+
+      @include mq(s) {
+        margin-right: 8px;
+      }
 
       &:after {
         content: "";
@@ -169,7 +225,6 @@ p {
 }
 
 .to-order, .form-group.order {
-  max-width: 250px;
 
   a, button {
     font-family: $b, sans-serif;
@@ -216,10 +271,21 @@ p {
 
 .to-order {
   margin: 32px auto 0;
+  max-width: 250px;
+
+  @include mq(xs) {
+    width: 81%;
+    min-width: 250px;
+    max-width: 380px;
+  }
 
   p {
     text-align: center;
     margin-top: 32px;
+
+    @include mq(md) {
+      margin-top: 13px;
+    }
   }
 }
 
@@ -237,6 +303,10 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+
+    @include mq(s) {
+      padding: 0 15px;
+    }
 
     >a {
       width: 19.2%;

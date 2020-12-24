@@ -2,7 +2,38 @@
     photo style
  */
 
-//.photo {
-//  position: relative;
-//  z-index: 9;
-//}
+.photo {
+
+  &__content {
+
+    a {
+
+      @include mq(md) {
+        width: 24%;
+      }
+
+      @include mq(xs) {
+        width: 48%;
+        margin-bottom: 10px;
+      }
+
+      &:nth-child(3) {
+
+        @include mq(xs) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
+
+        @include mq(md) {
+          display: none;
+        }
+
+        @include mq(xs) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

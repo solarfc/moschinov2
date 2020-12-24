@@ -9,28 +9,57 @@
   position: relative;
   z-index: 11;
 
+  @include mq(lg) {
+    background-position: left top;
+  }
+
+  @include mq(md) {
+    background-image: url("../img/header/bg-md.jpg");
+    padding: 35px 0 0;
+  }
+
   &__content {
     position: relative;
 
     .logo {
-
 
       svg {
         display: block;
         height: 49px;
         margin: 0 auto;
 
+        @include mq(md) {
+          margin: 0;
+        }
+
+        @include mq(xs) {
+          height: 36px;
+        }
+
         path {
           fill: #000;
+
+          @include mq(md) {
+            fill: #fff;
+          }
         }
 
         &:nth-child(1) {
           width: 88px;
+
+          @include mq(xs) {
+            width: 64px;
+          }
         }
 
         &:nth-child(2) {
           width: 186px;
-          margin: 6px auto 0;
+          margin-top: 6px;
+
+          @include mq(xs) {
+            width: 135px;
+            margin-top: 4px;
+          }
         }
       }
     }
@@ -41,10 +70,22 @@
 
       &:nth-child(2) {
         left: 0;
+
+        @include mq(md) {
+          display: none;
+        }
       }
 
       &:nth-child(3) {
         right: 0;
+
+        @include mq(md) {
+          top: -35px;
+        }
+
+        @include mq(xs) {
+          top: -30px;
+        }
       }
     }
 
@@ -52,6 +93,25 @@
       color: #9968ff;
       max-width: 500px;
       margin: 30.39px auto 17px;
+
+      @include mq(md) {
+        margin: 106.52px auto -3px;
+      }
+    }
+
+    .price {
+
+    }
+
+    .to-order {
+
+      @include mq(md) {
+        margin: 6px auto -48px;
+      }
+
+      @include mq(xs) {
+        margin-bottom: -10%;
+      }
     }
 
     img {
@@ -60,11 +120,49 @@
       &.white {
         bottom: -104.16px;
         left: 46.08px;
+
+        @include mq(lg) {
+          left: 0;
+        }
+
+        @include mq(md) {
+          position: relative;
+          top: 38px;
+          left: 0;
+          margin: 0;
+        }
+
+        @include mq(s) {
+          left: -20px;
+        }
+
+        @include mq(xs) {
+          width: 60%;
+          left: -5%;
+        }
       }
 
       &.black {
         bottom: -115.44px;
         right: 51.2px;
+
+        @include mq(lg) {
+          right: 0;
+        }
+
+        @include mq(md) {
+          bottom: -55px;
+        }
+
+        @include mq(s) {
+          right: -25px;
+        }
+
+        @include mq(xs) {
+          width: 61%;
+          min-width: 177px;
+          right: -5%;
+        }
       }
     }
   }
