@@ -11,6 +11,14 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <script async>
+            document.querySelector('html').style.overflowY = 'hidden';
+        </script>
+        <!-- loader start -->
+        <div class="loader">
+            <div class="loader__snow"></div>
+        </div>
+        <!-- loader end -->
         <!-- header start -->
         <header class="header">
             <div class="container">
@@ -47,6 +55,7 @@
                     <img src="img/header/white.png" alt="" class="white">
                     <img src="img/header/black.png" alt="" class="black">
                 </div>
+                <a href="#" class="cart"></a>
             </div>
         </header>
         <!-- header end -->
@@ -174,7 +183,7 @@
             <!-- catalog start -->
             <div class="catalog">
                 <div class="container">
-                    <div class="catalog__shoe boots">
+                    <div id="catalog" class="catalog__shoe boots">
                         <div class="logo">
                             <svg width="69" height="39" viewBox="0 0 69 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.2933 38.0815H0V0.982422H5.5536V32.5295H14.2933V38.0815Z" fill="black"/>
@@ -212,17 +221,17 @@
                                 <span class="black"></span>
                             </div>
                             <img src="img/catalog/boots-white/big.png" alt="" class="big white">
-                            <div class="images">
-                                <a href="img/catalog/boots-white/1-1000.jpg" data-fancybox="boots">
+                            <div class="images owl-carousel">
+                                <a href="img/catalog/boots-white/1-1000.jpg" data-fancybox="boots-white">
                                     <img src="img/catalog/boots-white/1.jpg" alt="">
                                 </a>
-                                <a href="img/catalog/boots-white/2-1000.jpg" data-fancybox="boots">
+                                <a href="img/catalog/boots-white/2-1000.jpg" data-fancybox="boots-white">
                                     <img src="img/catalog/boots-white/2.jpg" alt="">
                                 </a>
-                                <a href="img/catalog/boots-white/3-1000.jpg" data-fancybox="boots">
+                                <a href="img/catalog/boots-white/3-1000.jpg" data-fancybox="boots-white">
                                     <img src="img/catalog/boots-white/3.jpg" alt="">
                                 </a>
-                                <a href="img/catalog/boots-white/4-1000.jpg" data-fancybox="boots">
+                                <a href="img/catalog/boots-white/4-1000.jpg" data-fancybox="boots-white">
                                     <img src="img/catalog/boots-white/4.jpg" alt="">
                                 </a>
                             </div>
@@ -261,7 +270,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="catalog__shoe sneakers">
+                    <div id="mobile-order" class="catalog__shoe sneakers">
                         <div class="logo">
                             <svg width="69" height="39" viewBox="0 0 69 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.2933 38.0815H0V0.982422H5.5536V32.5295H14.2933V38.0815Z" fill="black"/>
@@ -299,7 +308,7 @@
                                 <span class="black"></span>
                             </div>
                             <img src="img/catalog/sneakers-white/big.png" alt="" class="big white">
-                            <div class="images">
+                            <div class="images owl-carousel">
                                 <a href="img/catalog/sneakers-white/1-1000.jpg" data-fancybox="sneakers">
                                     <img src="img/catalog/sneakers-white/1.jpg" alt="">
                                 </a>
