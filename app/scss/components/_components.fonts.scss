@@ -3,6 +3,19 @@
  */
 
 @font-face {
+  font-family: "EBGaramond-Regular";
+  src: url("../fonts/EBGaramond-Regular.woff");
+}
+$ebgr : "EBGaramond-Regular";
+
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../fonts/YesevaOne-Regular.woff");
+}
+$yor : "YesevaOne-Regular";
+
+
+@font-face {
   font-family: "OpenSans-Regular";
   src: url("../fonts/OpenSans-Regular.woff");
 }
@@ -13,4 +26,10 @@ $r : "OpenSans-Regular";
   src: url("../fonts/Oswald-Bold.woff");
 }
 $b : "Oswald-Bold";
+
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url("../fonts/Oswald-Regular.woff");
+}
+$or : "Oswald-Regular";
 

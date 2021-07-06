@@ -1,167 +1,58 @@
-/*
-    header style
- */
-
 .header {
-  background: url("../img/header/bg.jpg") no-repeat center/cover;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-  padding: 52px 0 55px;
-  position: relative;
-  z-index: 25;
-
-  @include mq(lg) {
-    background-position: left top;
-  }
-
-  @include mq(md) {
-    background-image: url("../img/header/bg-md.jpg");
-    padding: 35px 0 0;
-  }
+  padding: 19px;
 
   &__content {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .logo {
+    li {
+      position: relative;
+      padding: 20px 0;
 
-      svg {
-        display: block;
-        height: 49px;
-        margin: 0 auto;
+      a {
+        font-family: $ebgr, sans-serif;
+        font-size: 18px;
+        line-height: 23px;
+        color: #fff;
 
-        @include mq(md) {
-          margin: 0;
+        img {
+
         }
+      }
 
-        @include mq(xs) {
-          height: 36px;
-        }
+      >ul {
+        position: absolute;
+        bottom: -72px;
+        left: -21px;
+        background: #000000;
+        box-shadow: 0px 1px 16px rgba(255, 255, 255, 0.36);
+        padding: 13px 20px 18px;
+        opacity: 0;
+        transition: all 0.55s ease-in-out;
 
-        path {
-          fill: #000;
+        li {
+          padding: 0;
 
-          @include mq(md) {
-            fill: #fff;
+          a {
+
+
+          }
+
+          &:first-child {
+            margin-bottom: 8px;
           }
         }
-
-        &:nth-child(1) {
-          width: 88px;
-
-          @include mq(xs) {
-            width: 64px;
-          }
-        }
-
-        &:nth-child(2) {
-          width: 186px;
-          margin-top: 6px;
-
-          @include mq(xs) {
-            width: 135px;
-            margin-top: 4px;
-          }
-        }
-      }
-    }
-
-    .sale {
-      position: absolute;
-      top: -10px;
-
-      &:nth-child(2) {
-        left: 0;
-
-        @include mq(md) {
-          display: none;
-        }
       }
 
-      &:nth-child(3) {
-        right: 0;
-
-        @include mq(md) {
-          top: -35px;
-        }
-
-        @include mq(xs) {
-          top: -30px;
-        }
-      }
-    }
-
-    h2 {
-      color: #9968ff;
-      max-width: 500px;
-      margin: 30.39px auto 17px;
-
-      @include mq(md) {
-        margin: 106.52px auto -3px;
-      }
-    }
-
-    .price {
-
-    }
-
-    .to-order {
-
-      @include mq(md) {
-        margin: 6px auto -48px;
+      &:nth-child(5) {
+        padding: 0;
       }
 
-      @include mq(xs) {
-        margin-bottom: -10%;
-      }
-    }
+      &:hover {
 
-    img {
-      position: absolute;
-
-      &.white {
-        bottom: -104.16px;
-        left: 46.08px;
-
-        @include mq(lg) {
-          left: 0;
-        }
-
-        @include mq(md) {
-          position: relative;
-          top: 38px;
-          left: 0;
-          margin: 0;
-        }
-
-        @include mq(s) {
-          left: -20px;
-        }
-
-        @include mq(xs) {
-          width: 60%;
-          left: -5%;
-        }
-      }
-
-      &.black {
-        bottom: -115.44px;
-        right: 51.2px;
-
-        @include mq(lg) {
-          right: 0;
-        }
-
-        @include mq(md) {
-          bottom: -55px;
-        }
-
-        @include mq(s) {
-          right: -25px;
-        }
-
-        @include mq(xs) {
-          width: 61%;
-          min-width: 177px;
-          right: -5%;
+        >ul {
+          opacity: 1;
         }
       }
     }

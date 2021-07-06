@@ -5,14 +5,14 @@ var myWidth = window.innerWidth,
 console.log("width ".concat(myWidth, " \n height ").concat(myHeight));
 
 window.onload = function () {
-  setTimeout(function () {
-    document.querySelector('html').style.overflowY = 'scroll';
-    document.querySelector('.loader').style.cssText = 'opacity: 0; z-index: -5;';
-  }, 2000);
+  // setTimeout(() => {
+  //     document.querySelector('html').style.overflowY = 'scroll';
+  //     document.querySelector('.loader').style.cssText = 'opacity: 0; z-index: -5;';
+  // }, 2000);
+
   /*
       increase date
    */
-
   var today = new Date(),
       tomorrow = new Date(),
       day,
@@ -144,35 +144,19 @@ window.onload = function () {
   };
 
   change(bootsColors, bootsBigImg, bootsSmallImg, bootsSmallImgLink, 'boots');
-  change(sneakersColors, sneakersBigImg, sneakersSmallImg, sneakersSmallImgLink, 'sneakers'); // class Shoe {
-  //     constructor(color, bigImg) {
-  //         this.color = color;
-  //         this.bigImg = bigImg;
-  //     }
-  //
-  //     change() {
-  //         let color = this.color;
-  //         for(let i = 0; i < color.length; i++) {
-  //             for(let j = 0; j < color.length; j++) {
-  //                 color[j].addEventListener('click', () => {
-  //                     if(color[j].classList.contains('active')) {
-  //                         color[i].classList.remove('active');
-  //                         color[j].classList.add('active');
-  //                     } else {
-  //                         let activeColor = color[j].className;
-  //                         color[i].classList.remove('active');
-  //                         color[j].classList.add('active');
-  //
-  //                     }
-  //                 })
-  //             }
-  //         }
-  //     }
-  // }
-  //
-  // const boots = new Shoe(document.querySelectorAll('.catalog__shoe.boots .color span'));
-  // boots.change();
+  change(sneakersColors, sneakersBigImg, sneakersSmallImg, sneakersSmallImgLink, 'sneakers');
+  /*
+      the same height of the review text
+   */
 
+  $(function () {
+    $('.review__content-slider figure p').matchHeight({
+      byRow: false,
+      property: 'height',
+      target: null,
+      remove: false
+    });
+  });
   /*
       review slider
    */
@@ -191,28 +175,10 @@ window.onload = function () {
         items: 3,
         dots: false,
         nav: true,
-        navText: ['<img src="../img/arrow.png" alt="">', '<img src="../img/arrow.png" alt="">']
+        navText: ['<img src="img/arrow.png" alt="">', '<img src="img/arrow.png" alt="">']
       }
     }
-  }); // $('.review__content-slider').slick({
-  //     slidesToShow: 3,
-  //     slidesToScroll: 3,
-  //     centerMode: true,
-  //     centerPadding: 0,
-  //     rows: 0,
-  //     speed: 300,
-  //     arrows: true
-  // })
-  // /*
-  //     change href on mobile
-  //  */
-  //
-  // if(/iPhone|iPod|Android/i.test(navigator.userAgent)){
-  //     document.querySelector('a.grande').href = '#formgrande';
-  //     document.querySelector('a.lake').href = '#formlake';
-  //     document.querySelector('a.lou').href = '#formlou';
-  // }
-
+  });
   /*
       toggle bucket
    */
@@ -257,4 +223,12 @@ window.onload = function () {
     var _href = $('#catalog').offset().top;
     slowScroll(_href);
   }
-};
+}; // $.ajax(`https://repetitora.net/api/JS/Images`, {
+//     success: function (data) {
+//         data.forEach(el => {
+//             const img = document.createElement('img');
+//             img.src = el.thumbnail;
+//             document.querySelector('body').append(img);
+//         });
+//     }
+// });
